@@ -1,0 +1,37 @@
+[project]
+name = "llm-provider-feature-catalog"
+version = "0.1.0"
+description = "Provider-neutral LLM API feature catalog and migration guide for Solutions Architects"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+  "anthropic>=0.76.0",
+  "cerebras-cloud-sdk>=1.64.1",
+  "jsonschema>=4.26.0",
+  "openai>=2.15.0",
+  "pydantic>=2.0",
+  "requests>=2.31",
+  "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.3.0",
+  "black>=24.0",
+  "mypy>=1.8",
+  "pytest>=8.0",
+]
+
+[tool.uv]
+managed = true
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I"]
+
+[tool.mypy]
+python_version = "3.10"

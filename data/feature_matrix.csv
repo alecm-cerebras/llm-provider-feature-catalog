@@ -1,0 +1,47 @@
+﻿feature,gpt-oss-120b,zai-glm-4.6,zai-glm-4.7,llama-3.3-70b,llama3.1-8b,qwen-3-32b,qwen-3-235b-a22b-instruct-2507
+Streaming,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+Structured Outputs,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+Structured Outputs w/ Constrained Decoding,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+Structured Outputs w/ Streaming,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+Tool Calling,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+Parallel Tool Calling,N/A,Yes,Yes,Yes,Yes,Yes,Yes
+Multi-Turn Tool Calling,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+Tool Calling w/ Structured Outputs (in same request),No,No,No,No,No,No,No
+Tool Calling w/ Constrained Decoding,Yes,Yes,Yes,No,Yes,Yes,Yes
+Tool Calling w/ Streaming,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+Tool Calling w/ Constrained Decoding w/ Streaming,Yes,Yes,Yes,N/A,Yes,Yes,Yes
+Reasoning Toggle (on/off),N/A,Yes,Yes,N/A,N/A,Yes,N/A
+Reasoning Effort,Yes,N/A,N/A,N/A,N/A,N/A,N/A
+Reasoning Budget,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+Predicted Outputs,Yes,No,Yes,No,No,No,No
+Top P,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+Temperature,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+Frequency Penalty,No,No,No,No,No,No,No
+Presence Penalty,No,No,No,No,No,No,No
+Max Completion Tokens,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+Logit Bias,No,No,No,No,No,No,No
+Logprobs,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+Prompt Caching,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
