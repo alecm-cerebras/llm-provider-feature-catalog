@@ -525,6 +525,7 @@ dependencies = [
     { name = "jsonschema" },
     { name = "openai" },
     { name = "pydantic" },
+    { name = "pytest" },
     { name = "requests" },
     { name = "rich" },
 ]
@@ -546,6 +547,7 @@ requires-dist = [
     { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.8" },
     { name = "openai", specifier = ">=2.15.0" },
     { name = "pydantic", specifier = ">=2.0" },
+    { name = "pytest", specifier = ">=9.0.2" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.0" },
     { name = "requests", specifier = ">=2.31" },
     { name = "rich", specifier = ">=13.7" },
