@@ -1,3 +1,10 @@
+# Cerebras Inference API — Chat Completions (OpenAPI 3.1)
+
+This page contains the OpenAPI 3.1 specification for `POST /v1/chat/completions`.
+
+## OpenAPI JSON
+
+```json
 {
   "openapi": "3.1.0",
   "info": {
@@ -133,12 +140,10 @@
               "$ref": "#/components/schemas/ChatMessage"
             }
           },
-
           "clear_thinking": {
             "type": ["boolean", "null"],
             "description": "Controls whether thinking content from previous turns is included in prompt context. Supported only on zai-glm-4.7."
           },
-
           "logprobs": {
             "type": "boolean",
             "default": false,
@@ -150,19 +155,16 @@
             "maximum": 20,
             "description": "Number of most likely tokens to return per position. Requires logprobs=true."
           },
-
           "max_completion_tokens": {
             "type": ["integer", "null"],
             "minimum": 0,
             "description": "Maximum number of tokens generated in the completion, including reasoning tokens."
           },
-
           "parallel_tool_calls": {
             "type": ["boolean", "null"],
             "default": true,
             "description": "Whether to enable parallel function calling during tool use. If enabled, the model can request multiple tool calls in a single response."
           },
-
           "prediction": {
             "type": ["object", "null"],
             "description": "Predicted Output configuration.",
@@ -193,13 +195,11 @@
             },
             "additionalProperties": true
           },
-
           "reasoning_effort": {
             "type": ["string", "null"],
             "enum": ["low", "medium", "high"],
             "description": "Controls the amount of reasoning the model performs. Only available for gpt-oss-120b."
           },
-
           "response_format": {
             "type": ["object", "null"],
             "description": "Controls the output format of the model response.",
@@ -209,44 +209,37 @@
               { "$ref": "#/components/schemas/ResponseFormatJsonObject" }
             ]
           },
-
           "seed": {
             "type": ["integer", "null"],
             "description": "Best-effort deterministic sampling (not guaranteed)."
           },
-
           "service_tier": {
             "type": ["string", "null"],
             "enum": ["priority", "default", "auto", "flex"],
             "default": "default",
             "description": "Controls request prioritization. Private Preview."
           },
-
           "stop": {
             "type": ["string", "null"],
             "description": "Up to 4 sequences where the API will stop generating further tokens."
           },
-
           "stream": {
             "type": ["boolean", "null"],
             "default": false,
             "description": "If true, partial message deltas will be sent as server-sent events."
           },
-
           "temperature": {
             "type": ["number", "null"],
             "minimum": 0,
             "maximum": 1.5,
             "description": "Sampling temperature."
           },
-
           "top_p": {
             "type": ["number", "null"],
             "minimum": 0,
             "maximum": 1,
             "description": "Nucleus sampling parameter."
           },
-
           "tool_choice": {
             "description": "Controls which (if any) tool is called by the model.",
             "oneOf": [
@@ -272,7 +265,6 @@
               }
             ]
           },
-
           "tools": {
             "type": ["array", "null"],
             "description": "A list of tools the model may call. Currently, only functions are supported.",
@@ -280,7 +272,6 @@
               "$ref": "#/components/schemas/ToolDefinition"
             }
           },
-
           "user": {
             "type": ["string", "null"],
             "description": "Unique identifier representing your end-user."
@@ -288,7 +279,6 @@
         },
         "additionalProperties": true
       },
-
       "ChatMessage": {
         "type": "object",
         "required": ["role", "content"],
@@ -304,15 +294,11 @@
         },
         "additionalProperties": false
       },
-
       "ToolDefinition": {
         "type": "object",
         "required": ["type", "function"],
         "properties": {
-          "type": {
-            "type": "string",
-            "const": "function"
-          },
+          "type": { "type": "string", "const": "function" },
           "function": {
             "type": "object",
             "required": ["name"],
@@ -323,9 +309,7 @@
                 "pattern": "^[A-Za-z0-9_-]+$",
                 "description": "Function name to be called."
               },
-              "description": {
-                "type": "string"
-              },
+              "description": { "type": "string" },
               "parameters": {
                 "type": "object",
                 "description": "JSON Schema object describing tool arguments."
@@ -336,25 +320,18 @@
         },
         "additionalProperties": false
       },
-
       "ResponseFormatText": {
         "type": "object",
         "required": ["type"],
-        "properties": {
-          "type": { "type": "string", "const": "text" }
-        },
+        "properties": { "type": { "type": "string", "const": "text" } },
         "additionalProperties": false
       },
-
       "ResponseFormatJsonObject": {
         "type": "object",
         "required": ["type"],
-        "properties": {
-          "type": { "type": "string", "const": "json_object" }
-        },
+        "properties": { "type": { "type": "string", "const": "json_object" } },
         "additionalProperties": false
       },
-
       "ResponseFormatJsonSchema": {
         "type": "object",
         "required": ["type", "json_schema"],
@@ -370,62 +347,37 @@
                 "type": "object",
                 "description": "JSON Schema defining the structured output."
               },
-              "strict": {
-                "type": "boolean",
-                "default": false
-              }
+              "strict": { "type": "boolean", "default": false }
             },
             "additionalProperties": false
           }
         },
         "additionalProperties": false
       },
-
       "ChatCompletionResponse": {
         "type": "object",
         "required": ["id", "choices", "created", "model", "object", "usage", "time_info", "system_fingerprint"],
         "properties": {
-          "id": {
-            "type": "string",
-            "description": "Unique identifier for the chat completion."
-          },
-          "object": {
-            "type": "string",
-            "const": "chat.completion"
-          },
-          "created": {
-            "type": "integer",
-            "description": "Unix timestamp (seconds) of when the completion was created."
-          },
-          "model": {
-            "type": "string",
-            "description": "Model used."
-          },
-          "system_fingerprint": {
-            "type": "string"
-          },
+          "id": { "type": "string", "description": "Unique identifier for the chat completion." },
+          "object": { "type": "string", "const": "chat.completion" },
+          "created": { "type": "integer", "description": "Unix timestamp (seconds) of when the completion was created." },
+          "model": { "type": "string", "description": "Model used." },
+          "system_fingerprint": { "type": "string" },
           "choices": {
             "type": "array",
             "minItems": 1,
-            "items": {
-              "$ref": "#/components/schemas/ChatCompletionChoice"
-            }
+            "items": { "$ref": "#/components/schemas/ChatCompletionChoice" }
           },
           "service_tier_used": {
             "type": "string",
             "enum": ["priority", "default", "flex"],
             "description": "Only present when service_tier was set to auto in the request."
           },
-          "usage": {
-            "$ref": "#/components/schemas/Usage"
-          },
-          "time_info": {
-            "$ref": "#/components/schemas/TimeInfo"
-          }
+          "usage": { "$ref": "#/components/schemas/Usage" },
+          "time_info": { "$ref": "#/components/schemas/TimeInfo" }
         },
         "additionalProperties": true
       },
-
       "ChatCompletionChoice": {
         "type": "object",
         "required": ["finish_reason", "index", "message"],
@@ -434,27 +386,17 @@
             "type": "string",
             "enum": ["stop", "length", "content_filter", "tool_calls"]
           },
-          "index": {
-            "type": "integer"
-          },
-          "message": {
-            "$ref": "#/components/schemas/AssistantMessage"
-          }
+          "index": { "type": "integer" },
+          "message": { "$ref": "#/components/schemas/AssistantMessage" }
         },
         "additionalProperties": false
       },
-
       "AssistantMessage": {
         "type": "object",
         "required": ["role", "content"],
         "properties": {
-          "role": {
-            "type": "string",
-            "const": "assistant"
-          },
-          "content": {
-            "type": "string"
-          },
+          "role": { "type": "string", "const": "assistant" },
+          "content": { "type": "string" },
           "reasoning": {
             "type": "string",
             "description": "Reasoning content when using reasoning models/settings."
@@ -462,7 +404,6 @@
         },
         "additionalProperties": true
       },
-
       "Usage": {
         "type": "object",
         "required": ["prompt_tokens", "completion_tokens", "total_tokens", "prompt_tokens_details", "completion_tokens_details"],
@@ -473,9 +414,7 @@
           "prompt_tokens_details": {
             "type": "object",
             "required": ["cached_tokens"],
-            "properties": {
-              "cached_tokens": { "type": "integer" }
-            },
+            "properties": { "cached_tokens": { "type": "integer" } },
             "additionalProperties": false
           },
           "completion_tokens_details": {
@@ -490,7 +429,6 @@
         },
         "additionalProperties": false
       },
-
       "TimeInfo": {
         "type": "object",
         "required": ["queue_time", "prompt_time", "completion_time", "total_time", "created"],
@@ -503,7 +441,6 @@
         },
         "additionalProperties": false
       },
-
       "ErrorResponse": {
         "type": "object",
         "description": "Generic error response schema (shape may vary).",

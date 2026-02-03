@@ -1,3 +1,10 @@
+# Cerebras Inference API — Completions (OpenAPI 3.1)
+
+This page contains the OpenAPI 3.1 specification for `POST /v1/completions`.
+
+## OpenAPI JSON
+
+```json
 {
   "openapi": "3.1.0",
   "info": {
@@ -195,7 +202,6 @@
         },
         "additionalProperties": true
       },
-
       "CompletionResponse": {
         "type": "object",
         "required": ["id", "object", "created", "model", "system_fingerprint", "choices", "usage", "time_info"],
@@ -219,7 +225,6 @@
         },
         "additionalProperties": true
       },
-
       "CompletionChoice": {
         "type": "object",
         "required": ["finish_reason", "index", "text"],
@@ -264,7 +269,6 @@
         },
         "additionalProperties": true
       },
-
       "Usage": {
         "type": "object",
         "required": ["prompt_tokens", "completion_tokens", "total_tokens"],
@@ -275,7 +279,6 @@
         },
         "additionalProperties": true
       },
-
       "TimeInfo": {
         "type": "object",
         "required": ["queue_time", "prompt_time", "completion_time", "total_time", "created"],
@@ -288,7 +291,6 @@
         },
         "additionalProperties": true
       },
-
       "ErrorResponse": {
         "type": "object",
         "description": "Generic error response schema (shape may vary).",
