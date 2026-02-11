@@ -7,11 +7,15 @@ requires-python = ">=3.10"
 
 dependencies = [
   "anthropic>=0.76.0",
+  "beautifulsoup4>=4.14.3",
   "cerebras-cloud-sdk>=1.64.1",
   "jsonschema>=4.26.0",
+  "lxml>=6.0.2",
   "openai>=2.15.0",
+  "playwright>=1.58.0",
   "pydantic>=2.0",
   "pytest>=9.0.2",
+  "pyyaml>=6.0.3",
   "requests>=2.31",
   "rich>=13.7",
 ]

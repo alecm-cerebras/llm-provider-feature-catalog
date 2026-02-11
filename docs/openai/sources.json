@@ -1,0 +1,12 @@
+[
+  {
+    "slug": "chat-completions",
+    "doc_url": "https://platform.openai.com/docs/api-reference/chat/create",
+    "method": "post",
+    "path": "/chat/completions",
+    "server_url": "https://api.openai.com/v1",
+    "summary": "Chat Completions",
+    "operationId": "createChatCompletion",
+    "info_title": "OpenAI Inference API - Chat Completions"
+  }
+]

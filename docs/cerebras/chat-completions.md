@@ -1,6 +1,6 @@
-# Cerebras Inference API - Completions (OpenAPI 3.1)
+# Cerebras Inference API - Chat Completions (OpenAPI 3.1)
 
-This page contains the OpenAPI 3.1 specification for `POST /completions`.
+This page contains the OpenAPI 3.1 specification for `POST /chat/completions`.
 
 ## OpenAPI JSON
 
@@ -8,8 +8,8 @@ This page contains the OpenAPI 3.1 specification for `POST /completions`.
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Cerebras Inference API - Completions",
-    "description": "Machine-verifiable OpenAPI 3.1 contract for POST /completions."
+    "title": "Cerebras Inference API - Chat Completions",
+    "description": "Machine-verifiable OpenAPI 3.1 contract for POST /chat/completions."
   },
   "servers": [
     {
@@ -17,10 +17,10 @@ This page contains the OpenAPI 3.1 specification for `POST /completions`.
     }
   ],
   "paths": {
-    "/completions": {
+    "/chat/completions": {
       "post": {
-        "summary": "Completions",
-        "operationId": "createCompletion",
+        "summary": "Chat Completions",
+        "operationId": "createChatCompletion",
         "security": [
           {
             "bearerAuth": []

@@ -1,0 +1,12 @@
+[
+    {
+      "slug": "chat-completions",
+      "path": "/chat/completions",
+      "server_url": "https://api.baseten.co/v1",
+      "method": "post",
+      "summary": "Chat Completions",
+      "operationId": "createChatCompletion",
+      "info_title": "Baseten API - Chat Completions",
+      "doc_url": "https://docs.baseten.co/api-reference/chat-completions"
+    }
+  ]

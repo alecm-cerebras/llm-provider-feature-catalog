@@ -1,0 +1,12 @@
+[
+    {
+      "slug": "chat-completions",
+      "path": "/chat/completions",
+      "server_url": "https://api.groq.com/openai/v1",
+      "method": "post",
+      "summary": "Chat Completions",
+      "operationId": "createChatCompletion",
+      "info_title": "Groq API - Chat Completions",
+      "doc_url": "https://console.groq.com/docs/api-reference#chat-create"
+    }
+  ]

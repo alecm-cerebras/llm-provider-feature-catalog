@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "chat-completions",
+    "doc_url": "https://inference-docs.cerebras.ai/api-reference/chat-completions",
+    "method": "post",
+    "path": "/chat/completions",
+    "server_url": "https://api.cerebras.ai/v1",
+    "summary": "Chat Completions",
+    "operationId": "createChatCompletion",
+    "include_queue_threshold": true,
+    "info_title": "Cerebras Inference API - Chat Completions"
+  },
+  {
+    "slug": "completions",
+    "doc_url": "https://inference-docs.cerebras.ai/api-reference/completions",
+    "method": "post",
+    "path": "/completions",
+    "server_url": "https://api.cerebras.ai/v1",
+    "summary": "Completions",
+    "operationId": "createCompletion",
+    "include_queue_threshold": true,
+    "info_title": "Cerebras Inference API - Completions"
+  }
+]

@@ -1,0 +1,12 @@
+[
+    {
+      "slug": "chat-completions",
+      "path": "/chat/completions",
+      "server_url": "https://api.fireworks.ai/inference/v1",
+      "method": "post",
+      "summary": "Chat Completions",
+      "operationId": "createChatCompletion",
+      "info_title": "Fireworks Inference API - Chat Completions",
+      "doc_url": "https://docs.fireworks.ai/api-reference/post-chat-completions"
+    }
+  ]

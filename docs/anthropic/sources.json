@@ -1,0 +1,12 @@
+[
+    {
+      "slug": "messages",
+      "path": "/messages",
+      "server_url": "https://api.anthropic.com",
+      "method": "post",
+      "summary": "Create a message",
+      "operationId": "createMessage",
+      "info_title": "Anthropic Inference API - Messages",
+      "doc_url": "https://docs.anthropic.com/claude/reference/messages_post"
+    }
+  ]
